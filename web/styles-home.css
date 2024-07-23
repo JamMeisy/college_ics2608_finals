@@ -1,0 +1,312 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+/* General Elements*/
+* {
+    font-family: Montserrat, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    color: whitesmoke;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.lst-logo {
+    display: flex;
+    flex-direction: row;
+    height: 75%;
+}
+
+.lst-logo * {
+    height: 100%;
+    width: 100%;
+}
+
+.lst-logo-text {
+    height: 60%;
+    margin-left: 10%;
+}
+
+/* Header */
+header {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max(7vh, 5vw);
+    width: 100%;
+    top: 0;
+    background-color: rgba(31, 35, 38, 0.85);
+    z-index: 100;
+    padding: 1vh;
+}
+
+header > * {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 10%;
+}
+
+nav * {
+    margin-right: 25%;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: max(15px, 1.3vw);
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon img {
+    max-height: 8vh;
+}
+
+header a:hover {
+    color: gold;
+    text-shadow: 0 0 25px white;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    height: 21vh;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(31, 35, 38);
+    z-index: 100;
+}
+footer * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer > .lst-logo {
+    align-items: center;
+    justify-content: center;
+    max-height: 7vh;
+}
+
+.footer-wrapper {
+    flex-direction: column;
+}
+.footer-countdown p {
+    font-size: 20px;
+}
+
+.footer-wrapper p {
+    opacity: 85%;
+    line-height: 1.2em;
+}
+
+/* Background */
+body {
+    background-image: url("assets/bg/BG_Soraka.png");
+    background-size: cover;
+    background-position-x: center;
+}
+
+/* Content - Main Section */
+.content {
+    padding: 5% 10%;
+}
+
+.lol-logo {
+    display: flex;
+    max-height: 30vh;
+    padding: 3vw;
+    margin: 5vh 5% 3vh;
+}
+.lol-logo img {
+    filter: drop-shadow(1px 1px 25px rgb(48, 21, 41));
+}
+
+.play-now {
+    display: flex;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    width: 3em;
+    border-radius: 8px;
+    background: rgba(217, 217, 217, 0.48);
+    padding: 1vw 2vw;
+    font-size: 20px;
+}
+
+.play-now:hover {
+    background: #f05555;
+    box-shadow: 0 0 15px #fafafa;
+    text-shadow: 0 0 5px #fafafa;
+}
+
+/* Content - Stat Section */
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 3vh;
+    column-gap: 7vw;
+}
+section[id="home-stats"] {
+    margin: 10vh 0 6vh;
+}
+
+.container-top, .container-news  {
+    border-radius: 17px;
+    border: 1px solid #3A3C40;
+    background: #1E2126;
+    max-width: 35vw;
+    width: 100%;
+    min-width: 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+}
+.container-description {
+    margin: 3% 5% 1%;
+}
+
+.container-description p:nth-child(1) {
+    font-size: 1.5em;
+    line-height: 1em;
+}
+.container-description p:nth-child(2) {
+    font-size: 12px;
+}
+
+.container-top-headers, .entity {
+    padding: 1.5vh 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container-top-headers {
+    background-color: rgba(217, 217, 217, 0.15);
+}
+.entity {
+    border: rgba(217, 217, 217, 0.15);
+    min-height: 6vh;
+}
+.header-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 50%;
+    background: transparent;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+}
+.header-wrapper:hover {
+    cursor: pointer;
+}
+
+.header-name *:not(:last-child) {
+    margin-right: 10%;
+    max-width: 30%;
+}
+
+.header-attribute {
+    display: grid;
+    grid-template-columns: 4.5em 4.5em 4em;
+    max-height: 100%;
+
+    column-gap: 7%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-attribute * {
+    justify-self: center;
+}
+
+.player > .header-name img {
+    max-width: 30%;
+    margin-right: 10%;
+    border-radius: 50%;
+}
+
+.champion > .header-name img {
+    max-width: 30%;
+    margin-right: 10%;
+    border-radius: 8%;
+}
+
+/* News */
+#whats-new-prompt
+{
+    justify-content: flex-start;
+    margin: 0 20px;
+}
+#whats-new-prompt * {
+    font-size: 1.5em;
+}
+
+section[id="home-news"] {
+    margin: 2vh 0 6vh;
+}
+
+.container-news img {
+    border-radius: 17px 17px 0 0;
+}
+
+.container-news-content {
+    margin: 3% 5% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-tag {
+    background-color: #19376D;
+    border-radius: 20px;
+    font-size: 11px;
+    padding: 6px;
+    text-align: center;
+    text-decoration: wavy;
+    max-width: 30%;
+    margin-left: 1%;
+    margin-bottom: 4%;
+}
+
+.news-title {
+    font-size: 20px;
+    margin-bottom: 4%;
+}
+
+.news-prompt {
+    border: 1px solid whitesmoke;
+    padding: 16px;
+    width: 30%;
+    text-align: center;
+}
+
+/* Prompt */
+#sign-in-prompt {
+    display: flex;
+    justify-content: center;
+}
+#sign-in-prompt * {
+    font-size: 20px;
+    text-align: center;
+}
+#sign-in-prompt a {
+    text-decoration: underline;
+}

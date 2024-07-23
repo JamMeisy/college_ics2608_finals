@@ -1,0 +1,165 @@
+/* General Elements*/
+* {
+    font-family: Montserrat, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    color: whitesmoke;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.lst-logo {
+    display: flex;
+    flex-direction: row;
+    height: 75%;
+}
+
+.lst-logo * {
+    height: 100%;
+    width: 100%;
+}
+
+.lst-logo-text {
+    height: 60%;
+    margin-left: 10%;
+}
+
+/* Header */
+header {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max(7vh, 5vw);
+    width: 100%;
+    top: 0;
+    background-color: rgba(31, 35, 38, 0.85);
+    z-index: 100;
+    padding: 1vh;
+}
+
+header > * {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 10%;
+}
+
+nav * {
+    margin-right: 25%;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: max(15px, 1.3vw);
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon img {
+    max-height: 8vh;
+}
+
+header a:hover {
+    color: gold;
+    text-shadow: 0 0 25px white;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    height: 21vh;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(31, 35, 38);
+    z-index: 100;
+}
+footer * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer > .lst-logo {
+    align-items: center;
+    justify-content: center;
+    max-height: 7vh;
+}
+
+.footer-wrapper {
+    flex-direction: column;
+}
+.footer-countdown p {
+    font-size: 20px;
+}
+
+.footer-wrapper p {
+    opacity: 85%;
+    line-height: 1.2em;
+}
+
+/* Content */
+body
+{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://drive.google.com/uc?export=view&id=1mxW_uhWRWgnRJ2ZHeN1aH9blqGAmpSMd);
+    background-size: cover;
+    font-family: 'Poppins', serif;
+    padding: 7%
+}
+
+.champ-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vh 5vw;
+}
+
+.champ-name {
+    font: 700 40px 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.champ-title {
+    font: 400 20px 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.abilities {
+    margin: 2% 0 2%;
+    padding: 1vh 5vw;
+    font: 400 30px 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 3vh;
+    align-items: center;
+}
+
+.skill {
+    max-height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.iframe-container {
+    display: flex;
+    margin: 10px auto;
+    height: 50vh;
+    width: 42.2vw;
+    box-shadow: 5px 5px 5px black;
+}
+

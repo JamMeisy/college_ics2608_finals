@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    
+    <welcome-file-list>
+        <welcome-file>profile.jsp</welcome-file>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <listener>
+        <listener-class>
+            com.CountdownClass
+        </listener-class>
+    </listener>
+    <context-param>
+        <param-name>display-name</param-name>
+        <param-value>ohnoyen</param-value>
+    </context-param>
+    <context-param>
+        <param-name>project-info</param-name>
+        <param-value>ICS 2608 - MP4 - LEAGUE STAT TRACKER - GROUP 13</param-value>
+    </context-param>
+    <context-param>
+        <param-name>project-members</param-name>
+        <param-value>Justin Carlo Borja -- Rix Castaneda -- Jam Meisy Tan</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.LoginServlet</servlet-class>
+        <init-param>
+            <param-name>stored-username</param-name>
+            <param-value>summoner</param-value>
+        </init-param>
+        <init-param>
+            <param-name>stored-password</param-name>
+            <param-value>league</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChampionInfoServlet</servlet-name>
+        <servlet-class>com.ChampionInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProfileInfoServlet</servlet-name>
+        <servlet-class>com.ProfileInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChampionInfoServlet</servlet-name>
+        <url-pattern>/top-champion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfileInfoServlet</servlet-name>
+        <url-pattern>/top-player</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            15
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <error-page>
+        <exception-type>java.lang.NullPointerException</exception-type>
+        <location>/errorNull.jsp</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.IllegalArgumentException</exception-type>
+        <location>/errorAuthen.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404.jsp</location>
+    </error-page>
+</web-app>
